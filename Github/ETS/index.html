@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
-    <!-- Carga el núcleo de Firebase JS SDK -->
     <script
       src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <!-- Agrega el manejo de autenticación. -->
     <script
       src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-    <!-- Agrega el manejo de bases de datos. -->
     <script
       src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <!-- Agrega el manejo de storage. -->
     <script
       src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
-    <!-- Configura la app usando la información del sitio de Firebase. -->
     <script src="js/init.js"></script>
     <script type="module" src="cmp/mi-nav.js"></script>
     <script type="module" src="cmp/mi-footer.js"></script>
@@ -54,7 +49,6 @@
       const ctrlSesión = Fábrica.instancia.ctrlSesión;
       terminarSesión.addEventListener("click",
         () => ctrlSesión.terminaSesión());
-
       protege();
       async function protege() {
         try {
