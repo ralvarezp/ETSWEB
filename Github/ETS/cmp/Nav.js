@@ -6,10 +6,7 @@ class MiNav extends HTMLElement {
       </ul>`;
     this.ul = this.querySelector("ul");
   }
-  /**
-   * @param {Set<string>} privilegios
-   */
-  protege(privilegios) {
+    protege(privilegios) {
     let html = "";
     if (privilegios.has("Pasatiempos")) {
       html += /* html */ `<li><a href="pasatiempos.html">Pasatiempos</a></li>`;
