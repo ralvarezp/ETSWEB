@@ -1,6 +1,6 @@
 :root {
   font-family: sans-serif;
-  --color-active: #4646462c;
+  --color-active: #7CFC00;
   --color-header: white;
   --color-nav: white;
 }
@@ -24,7 +24,7 @@ mi-nav ul {
 }
 
 mi-nav ul li {
-  margin: 0.5rem;
+  margin: 1.0rem;
 }
 
 header {
@@ -36,17 +36,17 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--color-header);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
 }
 
 header a:first-child {
-  margin-right: 0.5rem;
+  margin-right: 1.0rem;
 }
 
 header button,
 header a:last-child {
-  margin-left: 0.5rem;
+  margin-left: 1.0rem;
 }
 
 h1 {
@@ -68,7 +68,7 @@ legend,
 p label {
   display: block;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 }
 
 p label>* {
@@ -129,10 +129,10 @@ ul.checks {
 
 .con_imagen .marco {
   display: block;
-  width: 30%;
+  width: 35%;
   margin-right: 1rem;
 }
 
 .con_imagen img {
-  width: 100%;
+  width: 60%;
 }
