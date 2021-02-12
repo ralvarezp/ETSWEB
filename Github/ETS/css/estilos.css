@@ -1,0 +1,138 @@
+:root {
+  font-family: sans-serif;
+  --color-active: #4646462c;
+  --color-header: white;
+  --color-nav: white;
+}
+
+body {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+mi-nav {
+  background-color: var(--color-nav);
+}
+
+mi-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  list-style: none;
+}
+
+mi-nav ul li {
+  margin: 0.5rem;
+}
+
+header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-header);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+header a:first-child {
+  margin-right: 0.5rem;
+}
+
+header button,
+header a:last-child {
+  margin-left: 0.5rem;
+}
+
+h1 {
+  margin: 0 auto 0 0;
+}
+
+mi-footer {
+  display: block;
+  margin: 1rem;
+  font-size: small;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+legend,
+p label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+p label>* {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+ul.lista,
+ul.checks {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.lista {
+  margin: 1rem 0;
+}
+
+ul.checks {
+  margin: 0;
+}
+
+.checks li,
+.lista li {
+  margin: 0;
+}
+
+.lista a,
+.checks label {
+  display: block;
+  padding: 1rem;
+}
+
+.lista a,
+.checks label {
+  font-size: 0.75rem;
+}
+
+.lista a:active {
+  background-color: var(--color-active);
+}
+
+.lista strong,
+.checks em {
+  font-size: 1rem;
+}
+
+.checks label,
+.con_imagen a {
+  display: flex;
+}
+
+.con_imagen a {
+  align-items: initial;
+}
+
+.con_imagen .marco {
+  display: block;
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.con_imagen img {
+  width: 100%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <!-- Carga el núcleo de Firebase JS SDK -->
+    <script
+      src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <!-- Agrega el manejo de autenticación. -->
+    <script
+      src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <!-- Agrega el manejo de bases de datos. -->
+    <script
+      src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <!-- Agrega el manejo de storage. -->
+    <script
+      src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <!-- Configura la app usando la información del sitio de Firebase. -->
+    <script src="js/init.js"></script>
+    <script type="module" src="cmp/mi-nav.js"></script>
+    <script type="module" src="cmp/mi-footer.js"></script>
+    <script type="module" src="cmp/mi-progreso.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <mi-nav id="miNav"></mi-nav>
+    <header>
+      <h1>Sesión</h1>
+      <button id=terminarSesión type="button">Terminar Sesión</button>
+    </header>
+    <figure><img id=IPN src="" alt=IPN></figure>
+    <p>
+      <label>
+        Email
+        <output id=email>
+          <mi-progreso></mi-progreso>
+        </output>
+      </label>
+    </p>
+    <p>
+      <label>
+        Nombre
+        <output id=nombre>
+          <mi-progreso></mi-progreso>
+        </output>
+      </label>
+    </p>
+    <mi-footer></mi-footer>
+    <script type="module">
+      import { Fábrica } from "./js/Fabrica.js";
+      import { muestraError } from "./lib/util.js";
+
+      const ctrlSesión = Fábrica.instancia.ctrlSesión;
+      terminarSesión.addEventListener("click",
+        () => ctrlSesión.terminaSesión());
+
+      protege();
+      async function protege() {
+        try {
+          const usuarioAutorizado = await ctrlSesión.protege("");
+          miNav.protege(usuarioAutorizado.privilegios);
+          email.value = usuarioAutorizado.email;
+          nombre.value = usuarioAutorizado.nombre;
+          IPN.src = usuarioAutorizado.urlFoto;
+        } catch (error) {
+          muestraError(error)
+        }
+      }
+    </script>
+  </body>
+</html>
